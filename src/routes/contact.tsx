@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { FormEvent, useState } from "react";
+import { useState, type FormEvent } from "react";
 import { ArrowRight, MapPin, MessageCircle, Phone } from "lucide-react";
 import panorama from "@/assets/himalayan-panorama.png";
 import { PageHero, pageMeta } from "@/components/page-elements";
