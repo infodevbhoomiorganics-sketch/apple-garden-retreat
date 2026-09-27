@@ -1,0 +1,9 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { Heart, Leaf, Soup, Users } from "lucide-react";
+import roomScene from "@/assets/apple-garden-room-floral.png";
+import mist from "@/assets/himalayan-mist.png";
+import { BookingBand, FeatureCard, PageHero, SectionTitle, pageMeta } from "@/components/page-elements";
+
+export const Route = createFileRoute("/dining")({ head: () => pageMeta("Authentic Himachali Food | Apple Garden Homestay", "Enjoy freshly prepared, home-cooked traditional Himachali food and local flavours at Apple Garden Homestay in Khajjiar.", "/dining"), component: DiningPage });
+
+function DiningPage() { return <><PageHero image={mist} alt="Green Himalayan landscape around Apple Garden Homestay" eyebrow="Dining" title="Authentic Himachali Flavours" description="Enjoy freshly prepared, home-cooked traditional Himachali food in a warm homestay setting." /><section className="section-shell grid gap-14 lg:grid-cols-[.9fr_1.1fr] lg:items-center"><div><SectionTitle eyebrow="From the home kitchen" title="Food made with warmth, served without fuss." copy="Dining here is about local flavours and the comfort of a homestay meal — fresh, welcoming and shared in an easy family-style setting." /><div className="mt-10 grid grid-cols-2 gap-x-6"><FeatureCard icon={<Soup />} title="Traditional">Himachali food.</FeatureCard><FeatureCard icon={<Heart />} title="Home-cooked">Meals prepared with care.</FeatureCard><FeatureCard icon={<Leaf />} title="Fresh">Local flavours.</FeatureCard><FeatureCard icon={<Users />} title="Together">Family-style dining.</FeatureCard></div></div><div className="image-lift min-h-[620px]"><img src={roomScene} alt="Warm homestay interior at Apple Garden Homestay" loading="lazy" className="h-[620px] w-full object-cover" /></div></section><BookingBand title="Ask about meals when you plan your stay." /></> }
